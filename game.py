@@ -24,6 +24,11 @@ MOVE_VELOCITY = 20
 WINDOW = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("2048")
 
+def draw(window):
+     window.fill(BACKGROUND_COLIR)
+     pygame.display.update()
+     
+
 def main(window):
     clock = pygame.time.Clock()
     run = True
@@ -35,6 +40,6 @@ def main(window):
                  if event.type == pygame.QUIT:
                     run = False
                     break
-
+            draw(window)
 if __name__ == '__main__':
     main(WINDOW)
