@@ -25,7 +25,20 @@ WINDOW = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 pygame.display.set_caption("2048")        
 
 class Tile:
-    pass
+    COLORS = [
+        (255, 248, 220),  # Cornsilk
+        (250, 235, 190),  # Light tan
+        (255, 200, 124),  # Apricot
+        (255, 165, 79),   # Light pumpkin
+        (255, 140, 60),   # Tangerine
+        (255, 105, 35),   # Sunset orange
+        (255, 220, 120),  # Pale gold
+        (255, 210, 90),   # Goldenrod
+        (255, 200, 60),   # Amber
+    ]
+
+
+
 
 def draw_grid(window):
     for row in range(1, NUMBER_OF_ROWS):
