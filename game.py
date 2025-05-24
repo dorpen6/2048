@@ -1,3 +1,10 @@
+## RULES OF THE GAME
+## 4X4 GRIDS = MAX 16 TILES
+## EVERY TIME WE MOVE => WE ADD 1 TILE TO THE GAME
+## 2 2 => 4
+## WHEN THE TILES HAVE SAME VALUES AND THEY HIT EACH OTHER, SUM THEM => 4 4 = 8, 8 8 = 16... ETC.
+## YOU WILL LOOSE THE GAME IF THERE IS NO MORE ROOM ON THE GAME TO ADD MORE TILES AND YOU CAN'T MERGE ANY OF THEM TOGETHER.
+
 import pygame
 import random
 import math
@@ -36,6 +43,26 @@ class Tile:
         (255, 210, 90),   # Goldenrod
         (255, 200, 60),   # Amber
     ]
+
+    def __init__(self, value, row, col):
+         self.value = value
+         self.row = row
+         self.col = col
+         self.x = col * RECT_WIDTH
+         self.y = row * RECT_HEIGHT
+
+    def get_color(self):
+         pass
+    
+    def draw(self, window):
+         pass
+    
+    def move(self, delta):
+         pass
+    
+    def set_position(self):
+         pass
+    
 
 
 
