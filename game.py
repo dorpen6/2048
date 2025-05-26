@@ -52,13 +52,23 @@ class Tile:
          self.y = row * RECT_HEIGHT
 
     def get_color(self):
-         color_index = (math.log2(self.value)) - 1 # This line calculates color_index by taking the base-2 logarithm of self.value and subtracting 1,  used to map powers of 2 (like 2, 4, 8...) to sequential indices starting from 0.
-         color = self.COLORS[color_index]
-         return color
+          color_index = (math.log2(self.value)) - 1 # This line calculates color_index by taking the base-2 logarithm of self.value and subtracting 1,  used to map powers of 2 (like 2, 4, 8...) to sequential indices starting from 0.
+          color = self.COLORS[color_index]
+          return color
     
     def draw(self, window):
-     
-         pass
+          color = self.get_color()
+          pygame.draw.rect(window, colorm (self.x, self.y, RECT_WIDTH, RECT_HEIGHT))
+
+          text = FONT.render(str(self.value), 1, FONT_COLOR)
+          window.blit(
+               text,
+               (
+                    self.x + (RECT_WIDTH / 2 - text.get_width() / 2),
+                    self.y + (RECT_HEIGHT / 2 - text.get_height() / 2),
+               ),
+          )
+         
     
     def move(self, delta):
          pass
