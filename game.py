@@ -53,7 +53,8 @@ class Tile:
 
     def get_color(self):
          color_index = (math.log2(self.value)) - 1 # This line calculates color_index by taking the base-2 logarithm of self.value and subtracting 1,  used to map powers of 2 (like 2, 4, 8...) to sequential indices starting from 0.
-
+         color = self.COLORS[color_index]
+         return color
     
     def draw(self, window):
      
